@@ -30,6 +30,4 @@ public class OddController {
         return result1;
     }
 
-
-
 }
