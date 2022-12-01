@@ -1,0 +1,23 @@
+package com.example.demospringbootsept.controller;
+
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+@RestController
+public class CalculatorController {
+
+
+    @RequestMapping("addition/{a}/{b}")
+    public String add(@PathVariable int a, @PathVariable int b){
+
+        String msg="";
+
+        int sum=a+b;
+
+        msg= "Addition is : "+sum;
+
+        return msg;
+    }
+
+}
