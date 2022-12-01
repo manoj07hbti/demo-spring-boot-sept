@@ -1,6 +1,5 @@
 package com.example.demospringbootsept.controller;
 
-//import com.example.demospringbootsept.model.Employee;
 import com.example.demospringbootsept.model.Employee;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
