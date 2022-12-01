@@ -11,7 +11,7 @@ import org.springframework.web.bind.annotation.RestController;
         6- Armstrong number : 243 is Armstrong number , 243 is not Armstrong number*/
 
 @RestController
-public class assign_2_fibnocii_series {
+public class Assign_2_fibnocii_series {
 
     @RequestMapping("/fib")
     public String fibnocii(){
