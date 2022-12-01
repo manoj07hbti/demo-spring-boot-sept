@@ -1,4 +1,4 @@
-package model;
+package com.example.demospringbootsept.model;
 
 public class Employee {
     String name;

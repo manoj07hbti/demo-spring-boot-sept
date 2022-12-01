@@ -1,6 +1,7 @@
 package com.example.demospringbootsept.controller;
 
-import model.Employee;
+//import com.example.demospringbootsept.model.Employee;
+import com.example.demospringbootsept.model.Employee;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -9,11 +10,11 @@ import java.util.ArrayList;
 @RestController
 public class Assign2_Employee_Data {
 
-    @RequestMapping("/employee1")
+   /* @RequestMapping("/employee1")
     public Employee emp(){
         Employee emp1 = new Employee("Rahul","Developer",1,55000.75);
         return emp1;
-    }
+    }*/
     @RequestMapping("/employee_info")
     public ArrayList<Employee> info(){
         ArrayList<Employee> EmployeeInfo = new ArrayList<>();
