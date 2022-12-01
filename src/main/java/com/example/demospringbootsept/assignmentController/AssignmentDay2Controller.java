@@ -34,6 +34,8 @@ public class AssignmentDay2Controller {
             num1 = num2;
             num2 = num3;
 
+            result+= result;
+
         }
         return result;
     }
