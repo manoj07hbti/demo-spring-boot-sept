@@ -1,4 +1,4 @@
-package com.example.demospringbootsept.controller;
+package com.example.demospringbootsept.controller.Path_Variable;
 
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
