@@ -17,9 +17,9 @@ public class Day3PathVariableController {
 
                 result =  i+ " is Odd";
             }
-//            else {
-//                result = number +" is odd";
-//            }
+            else {
+                result = number +" is odd";
+            }
         }
         return result;
     }
