@@ -6,6 +6,11 @@ import org.springframework.web.bind.annotation.RestController;
 
 import java.util.ArrayList;
 
+
+
+
+//---------------------Assignment 3- Employee Data--------------------------------------------------
+
 @RestController
 public class EmpDataController {
     @RequestMapping("/employee_data")
@@ -16,6 +21,8 @@ public class EmpDataController {
     }
 
 
+
+    //---------------------Assignment 2- All Employee Data--------------------------------------------------
     @RequestMapping("/employees_data")
     public ArrayList<Employee>  getEmployeeList(){
 
