@@ -18,7 +18,7 @@ public class D_Controller {
         int b=10;
         return a*b;
     }
-    @RequestMapping("/welcome")
+    @RequestMapping("/w")
     public String welcome(){
         String name="this is my first step on Google😍😍 felling Fresh🤣🤣🤣🤣🤣🤣🤣";
         return name;
