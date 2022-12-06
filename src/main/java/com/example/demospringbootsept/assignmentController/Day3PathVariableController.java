@@ -6,7 +6,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 public class Day3PathVariableController {
-@RequestMapping("/check_odd/{number}")
+@RequestMapping("/check_odd_day3/{number}")
     public String checkOdd(@PathVariable int number){
 
         String result = "" ;
