@@ -1,4 +1,4 @@
-package com.example.demospringbootsept.controller.Crud_Controller;
+package com.example.demospringbootsept.controller.crud_Controller;
 
 import com.example.demospringbootsept.model.Employee;
 import org.springframework.web.bind.annotation.RequestBody;
