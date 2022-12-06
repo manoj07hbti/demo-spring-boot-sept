@@ -1,14 +1,14 @@
-package com.example.demospringbootsept.controller.Controller_Program;
+package com.example.demospringbootsept.controller.path_variable;
 
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-public class Armstrong_Number {
-    @RequestMapping("/armstrong")
-    public  String armstrong(){
+public class Arms_Path_Variable {
+    @RequestMapping("/arms/{num}")
+    public  String arms_check(@PathVariable int num){
         String msg ="";
-        int num=123;
         int realNam,remainder,result=0;
         realNam=num;
         while (realNam!=0){

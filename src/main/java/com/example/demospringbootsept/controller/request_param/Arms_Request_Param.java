@@ -1,13 +1,13 @@
-package com.example.demospringbootsept.controller.Path_Variable;
+package com.example.demospringbootsept.controller.request_param;
 
-import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-public class Arms_Path_Variable {
-    @RequestMapping("/arms/{num}")
-    public  String arms_check(@PathVariable int num){
+public class Arms_Request_Param {
+    @RequestMapping("/arms")
+    public  String arms_check(@RequestParam int num){
         String msg ="";
         int realNam,remainder,result=0;
         realNam=num;

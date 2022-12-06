@@ -1,15 +1,14 @@
-package com.example.demospringbootsept.controller.Request_Param;
+package com.example.demospringbootsept.controller.controller_Program;
 
-import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-public class Arms_Request_Param {
-    @RequestMapping("/arms")
-    public  String arms_check(@RequestParam int num){
+public class Armstrong_Number {
+    @RequestMapping("/armstrong")
+    public  String armstrong(){
         String msg ="";
+        int num=123;
         int realNam,remainder,result=0;
         realNam=num;
         while (realNam!=0){

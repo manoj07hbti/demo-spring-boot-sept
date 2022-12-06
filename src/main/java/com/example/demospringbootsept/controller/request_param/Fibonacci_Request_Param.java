@@ -1,4 +1,4 @@
-package com.example.demospringbootsept.controller.Request_Param;
+package com.example.demospringbootsept.controller.request_param;
 
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
