@@ -42,7 +42,7 @@ public class Employee {
         return company;
     }
 
-    public void setCompany(String company) {
+    public void setCompany() {
         this.company = company;
     }
 }
