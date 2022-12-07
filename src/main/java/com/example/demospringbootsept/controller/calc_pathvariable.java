@@ -37,5 +37,14 @@ public class calc_pathvariable {
         return msg;
     }
 
-}
+
+    @RequestMapping("/per/{a}/{b}/{c}/{d}")
+    public String percentage(@PathVariable int a , @PathVariable int b, @PathVariable int c, @PathVariable int d){
+            String msg="";
+            double percent=(double)(a+b+c+d)/4;
+            msg="answer is :" +percent+"%";
+            return msg;
+        }
+    }
+
 
