@@ -6,7 +6,7 @@ import org.springframework.web.bind.annotation.*;
 import java.util.ArrayList;
 
 @RestController
-public class curd_Employee {
+public class crud_Employee {
     ArrayList<Employee> listEmployees = new ArrayList<>();
 
     @RequestMapping(value = "/add_employee",method =RequestMethod .POST )
