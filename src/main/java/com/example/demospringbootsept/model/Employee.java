@@ -14,6 +14,9 @@ public class Employee {
         this.post = post;
         this.salary = salary;
     }
+
+    public Employee() {
+    }
     // todo Getter and Setter
 
     public String getName() {

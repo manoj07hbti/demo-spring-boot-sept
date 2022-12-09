@@ -23,7 +23,7 @@ public class Employees_Crud {
     }
 
     //todo update crud method
-    @RequestMapping(value = "/update_name/{index}/{name}" ,method = RequestMethod.PUT)
+    @RequestMapping(value = "/update_name/{index}/{name}", method = RequestMethod.PUT)
     public String updateEmployees(@PathVariable int index, @PathVariable String name) {
         Employee emp = employeeArrayList.get(index);
         emp.setName(name);
@@ -32,7 +32,7 @@ public class Employees_Crud {
 
     //todo remove  crud method
 
-    @RequestMapping(value = "/remove" , method = RequestMethod.DELETE)
+    @RequestMapping(value = "/remove", method = RequestMethod.DELETE)
     public String removeEmployees(@RequestParam int index) {
         employeeArrayList.remove(index);
         return "remove successful";
