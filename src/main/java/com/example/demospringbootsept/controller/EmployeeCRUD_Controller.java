@@ -25,7 +25,7 @@ public class EmployeeCRUD_Controller {
     }
 
     @RequestMapping(value = "/update_employee/{index}/{name}", method = RequestMethod.PUT)
-    public String updateStudent(@PathVariable int index, @PathVariable String name){
+    public String updateEmployee(@PathVariable int index, @PathVariable String name){
 
         Employee emp = empArrayList.get(index);
         emp.setName(name);
