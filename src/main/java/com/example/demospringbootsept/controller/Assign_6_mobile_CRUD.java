@@ -21,7 +21,7 @@ public class Assign_6_mobile_CRUD {
         return "mobile details at index "+index+" has been updated";
     }
     @RequestMapping("/get_mobile_data")
-    public ArrayList<Mobile> moblileData()  {
+    public ArrayList<Mobile> mobileData()  {
         return mobileArrayList;
     }
 
