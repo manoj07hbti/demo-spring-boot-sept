@@ -27,6 +27,14 @@ public class EmployeeCrudController {
         return employeeArrayList;
     }
 
+    @RequestMapping(value = "/search_Student",method = RequestMethod.GET)
+    public  ArrayList<Employee> getDataSearch(@PathVariable int  index)
+    {
+       Employee employee = employeeArrayList.get(index);
+        return employeeArrayList;
+
+    }
+
     //     3. -> U  --  Update ------------- PUT
 
     @RequestMapping(value = "/update_employee/{index}/{name}" ,method = RequestMethod.DELETE )
