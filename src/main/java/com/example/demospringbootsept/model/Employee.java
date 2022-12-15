@@ -1,10 +1,22 @@
 package com.example.demospringbootsept.model;
 
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+
+@Entity(name="Employee_java_sept_batch")
 public class Employee {
 
+    @Id
+    @GeneratedValue
+    int code;
+    @Column(name="Employee_Name")
     String name;
     String department;
-    int code;
+
+    public Employee() {
+    }
 
     public Employee(String name, String department, int code) {
         this.name = name;
