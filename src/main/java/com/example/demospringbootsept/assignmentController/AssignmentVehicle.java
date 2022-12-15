@@ -26,16 +26,22 @@ public class AssignmentVehicle {
         return vehicleArrayList;
     }
 
-    @RequestMapping("/get_vehicle")
+    @RequestMapping("/get_vehicle/{index}")
     public Vehicle get_Vehicle(@RequestParam int index){
         return vehicleArrayList.get(index);
     }
 
     @RequestMapping("/update_vehicleType/{index}/{vehicleType}")
-    public String update_vehicleType(int index,String vehicleType){
+    public String update_vehicleType( @PathVariable int index,@PathVariable String vehicleType){
         vehicleArrayList.get(index).setVehicleType(vehicleType);
         return "Vehicle Type Updated Successfully";
     }
+
+//    @RequestMapping("/del_vehicle/{index}")
+//    public Vehicle del_Vehicle(@RequestParam int index){
+//        return vehicleArrayList.get(index);
+//    }
+
 
 
 
