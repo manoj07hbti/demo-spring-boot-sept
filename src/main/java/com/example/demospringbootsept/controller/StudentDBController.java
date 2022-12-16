@@ -16,7 +16,7 @@ public class StudentDBController {
 
     //CRUD
     //CREATE
-    @PostMapping("/add_std_db")
+    @PostMapping("/add_std_db") // @RequestMapping(value = "/add_student",method = RequestMethod.POST)
     public String addStudent(@RequestBody Student student){
 
         return service.add(student);
@@ -24,7 +24,7 @@ public class StudentDBController {
     }
 
     //READ
-    @GetMapping("/get_all_std")
+    @GetMapping("/get_all_std")// @RequestMapping(value = "/get_students", method = RequestMethod.GET)
     public List<Student> getAll(){
 
       return   service.getAllStd();
@@ -32,7 +32,7 @@ public class StudentDBController {
 
     //UPDATE
 
-    @PutMapping("/update_std_db/{roll_no}/{name}")
+    @PutMapping("/update_std_db/{roll_no}/{name}") //@RequestMapping(value = "/update_student/{index}/{name}", method = RequestMethod.PUT)
     public String update(@PathVariable long roll_no,@PathVariable String name){
 
         return service.update(roll_no,name);
@@ -41,7 +41,7 @@ public class StudentDBController {
 
     //Delte
 
-    @DeleteMapping("/delete_std_db/{roll_no}")
+    @DeleteMapping("/delete_std_db/{roll_no}")// @RequestMapping(value = "/remove_student", method = RequestMethod.DELETE)
     public String delete(@PathVariable long roll_no){
 
         return service.delete(roll_no);
