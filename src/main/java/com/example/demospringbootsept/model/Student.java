@@ -1,15 +1,30 @@
 package com.example.demospringbootsept.model;
 
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+
+@Entity(name = "Student_september_batch")
 public class Student {
 
+
+    @Id
+    @GeneratedValue
+    long rollNo;
+
+    @Column(name = "student_name")
     String name;
     int age;
-    int rollNo;
+
     String section;
 
+    //default constructor
+    public Student(){
+
+    }
+
     // parameterized constructor
-
-
     public Student(String name, int age, int rollNo, String section) {
         this.name = name;
         this.age = age;
@@ -36,11 +51,11 @@ public class Student {
         this.age = age;
     }
 
-    public int getRollNo() {
+    public long getRollNo() {
         return rollNo;
     }
 
-    public void setRollNo(int rollNo) {
+    public void setRollNo(long rollNo) {
         this.rollNo = rollNo;
     }
 
