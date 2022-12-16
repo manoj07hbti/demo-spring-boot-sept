@@ -1,21 +1,31 @@
 package com.example.demospringbootsept.model;
 
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+
+@Entity(name="EmployeeDetail_Java")
 public class Employee {
-    int empid;
+    @Id
+    @GeneratedValue
+    long empid;
     String empName;
     String empDept;
     int deptId;
 
 //    Parameterized Constructor
 
-    public Employee(int empid, String empName, String empDept, int deptId) {
+    public Employee() {
+    }
+
+    public Employee(long empid, String empName, String empDept, int deptId) {
         this.empid = empid;
         this.empName = empName;
         this.empDept = empDept;
         this.deptId = deptId;
     }
 
-    public int getEmpid() {
+    public long getEmpid() {
         return empid;
     }
 
