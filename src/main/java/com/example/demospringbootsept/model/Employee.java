@@ -13,6 +13,11 @@ public class Employee {
     String name;
     String city;
 
+    //Default constructor
+
+    public Employee(){
+    }
+
 
     public Employee(String name, String city, long roll) {
         this.name = name;
