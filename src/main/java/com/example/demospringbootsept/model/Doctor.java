@@ -1,33 +1,33 @@
 package com.example.demospringbootsept.model;
 
-
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 
-@Entity(name = "EMPLOYEE_DATA")
-public class Employee {
+@Entity
+public class Doctor {
+
 
     @Id
     @GeneratedValue
-
     int id;
 
-    @Column(name = "employee_name")
+    @Column(name="Doctor_name")
     String name;
-    int salary;
 
-    String company;
+    long salary;
 
-    public Employee() {
+    int age;
+
+    public Doctor() {
     }
 
-    public Employee(String name, int salary, int id, String company) {
+    public Doctor(String name, int id, long salary, int age) {
         this.name = name;
-        this.salary = salary;
         this.id = id;
-        this.company = company;
+        this.salary = salary;
+        this.age = age;
     }
 
     public String getName() {
@@ -38,14 +38,6 @@ public class Employee {
         this.name = name;
     }
 
-    public int getSalary() {
-        return salary;
-    }
-
-    public void setSalary(int salary) {
-        this.salary = salary;
-    }
-
     public int getId() {
         return id;
     }
@@ -54,11 +46,19 @@ public class Employee {
         this.id = id;
     }
 
-    public String getCompany() {
-        return company;
+    public long getSalary() {
+        return salary;
     }
 
-    public void setCompany() {
-        this.company = company;
+    public void setSalary(long salary) {
+        this.salary = salary;
+    }
+
+    public int getAge() {
+        return age;
+    }
+
+    public void setAge(int age) {
+        this.age = age;
     }
 }
