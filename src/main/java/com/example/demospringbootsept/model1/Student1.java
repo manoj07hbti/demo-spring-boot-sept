@@ -1,10 +1,25 @@
 package com.example.demospringbootsept.model1;
 
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+
+@Entity(name="STUDENT_SEPT_JAVa")
 public class Student1 {
+    @Id
+    @GeneratedValue
+    long rollNo;
+    @Column(name="Student_name")
+
     String name;
-    int rollNo;
+
     int age;
+
     String section;
+
+    public Student1() {
+    }
 
     public Student1(String name, int rollNo, int age, String section) {
         this.name = name;
@@ -21,7 +36,7 @@ public class Student1 {
         this.name = name;
     }
 
-    public int getRollNo() {
+    public long getRollNo() {
         return rollNo;
     }
 
