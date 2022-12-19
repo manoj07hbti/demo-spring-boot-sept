@@ -1,11 +1,15 @@
 package com.example.demospringbootsept.model;
 
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
 
 @Entity
 public class Employee {
     String name;
     String department;
+    @Id
+    @GeneratedValue
     int id;
     Double Salary;
     public Employee() {
