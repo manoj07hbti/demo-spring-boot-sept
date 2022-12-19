@@ -36,4 +36,28 @@ public class EmployeeDBController {
 
         return service.delete(code);
     }
+    @GetMapping("/find_by_code")
+    public Employee getByCode(@RequestParam Long code){
+        return service.getEmpByCode(code);
+    }
+
+    @GetMapping("/find_by_name")
+    public Employee getByName(@RequestParam String name){
+        return service.getEmpByName(name);
+    }
+
+    @GetMapping("/find_by_name_code")
+    public Employee getByNameAndCode(@RequestParam String name,@RequestParam Long code){
+        return service.getEmpByNameAndCode(name, code);
+    }
+
+    @GetMapping("/find_by_query")
+    public Employee getEmpByQuery(@RequestParam String name, @RequestParam Long code){
+        return service.getEmpByQuery(name, code);
+    }
+
+    @GetMapping("/findall_by_query")
+    public List<Employee> getAllEmp(@RequestParam String department){
+        return service.getAllEmpQuery(department);
+    }
 }

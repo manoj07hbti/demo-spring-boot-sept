@@ -44,4 +44,24 @@ public class EmployeeService {
 
         return "Record Successfully deleted";
     }
+    public Employee getEmpByCode(Long code){
+
+        return repository.findByCode(code);
+    }
+
+    public Employee getEmpByName(String name){
+        return repository.findByName(name);
+    }
+
+    public Employee getEmpByNameAndCode(String name, Long code){
+        return repository.findByNameAndCode(name, code);
+    }
+
+    public Employee getEmpByQuery(String name, Long code){
+        return repository.nativeQuery(name, code);
+    }
+
+    public List<Employee> getAllEmpQuery(String department){
+        return repository.getAllEmployee(department);
+    }
 }
