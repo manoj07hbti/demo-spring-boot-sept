@@ -5,6 +5,7 @@ import com.example.demospringbootsept.model1.Student1;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.RequestParam;
 
 import java.util.List;
 
@@ -20,14 +21,17 @@ public class StudentDBService {
         return repository.findAll();
 
     }
-    public String update(@PathVariable long roll_no,@PathVariable String name){
+    public String update(long roll_no, String name){
         Student1 student=repository.getById(roll_no);
         student.setName(name);
         repository.save(student);
         return "Name Change Successfully";
     }
-    public String remove(@PathVariable long roll_no){
+    public String remove( long roll_no){
         repository.deleteById(roll_no);
         return "name delete successfully";
+    }
+    public Student1 findByName( String name){
+        return repository.findByName(name);
     }
 }

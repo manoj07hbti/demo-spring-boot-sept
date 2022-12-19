@@ -22,14 +22,14 @@ public class DoctorDBService {
 
        return repository.findAll();
     }
-    public String update(@RequestParam int serial_no,@RequestParam int age){
+    public String update( int serial_no, int age){
         Doctor1 doctor=repository.getById(serial_no);
         doctor.setAge(age);
         repository.save(doctor);
         return"age update successfully you are great Vishal baboo";
 
     }
-    public String remove(@RequestParam int serial_no){
+    public String remove( int serial_no){
         repository.deleteById(serial_no);
 
         return"Data Delete Successfuly";

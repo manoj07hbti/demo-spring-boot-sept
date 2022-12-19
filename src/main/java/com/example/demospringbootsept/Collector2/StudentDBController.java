@@ -30,4 +30,8 @@ public class StudentDBController {
     public String remove(@PathVariable long roll_no){
         return service.remove(roll_no);
         }
+        @RequestMapping("/find_by_name")
+    public Student1 findByName(@RequestParam String name){
+        return service.findByName(name);
+        }
 }
