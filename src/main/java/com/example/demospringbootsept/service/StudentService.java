@@ -48,4 +48,31 @@ public class StudentService {
         return "Successfully delete record ";
     }
 
+    public Student getStudentByRollno(long roll_no){
+
+      return   repository.findByRollNo(roll_no);
+
+
+    }
+
+    public Student getStudentByName(String name){
+
+        return   repository.findByName(name);
+
+
+    }
+
+    public Student getStudentByNameAndRollNo(String name, long roll_no){
+
+        return  repository.findByNameAndRollNo(name, roll_no);
+
+
+    }
+
+    public Student getStudentByQuery(String name, long roll_no){
+
+        return repository.nativeQuery(name,roll_no);
+
+
+    }
 }

@@ -39,12 +39,41 @@ public class StudentDBController {
 
     }
 
-    //Delte
+    //Delete
 
     @DeleteMapping("/delete_std_db/{roll_no}")// @RequestMapping(value = "/remove_student", method = RequestMethod.DELETE)
     public String delete(@PathVariable long roll_no){
 
         return service.delete(roll_no);
+    }
+
+    @GetMapping("/find_by_rollno")
+    public Student getStudent(@RequestParam long roll_no){
+
+       return service.getStudentByRollno(roll_no);
+
+    }
+
+    @GetMapping("/find_by_name")
+    public Student getStudent(@RequestParam String name){
+
+        return service.getStudentByName(name);
+
+    }
+
+
+    @GetMapping("/find_by_name_rollno")
+    public Student getStudentByNameRollNo(@RequestParam String name, @RequestParam long rollNo){
+
+        return service.getStudentByNameAndRollNo(name,rollNo);
+
+    }
+
+    @GetMapping("/find_by_query")
+    public Student getStudentByQuery(@RequestParam String name, @RequestParam long rollNo){
+
+        return service.getStudentByQuery(name,rollNo);
+
     }
 
 }
