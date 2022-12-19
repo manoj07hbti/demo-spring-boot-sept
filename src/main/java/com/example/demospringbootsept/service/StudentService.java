@@ -75,4 +75,12 @@ public class StudentService {
 
 
     }
+
+    public List<Student> getAllStudentQuery(String section){
+
+        return repository.getAllStudent(section);
+    }
+
+
+
 }

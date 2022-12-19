@@ -76,4 +76,11 @@ public class StudentDBController {
 
     }
 
+    @GetMapping("/findall_by_query")
+    public List <Student> getAllStudent(@RequestParam  String section){
+
+        return service.getAllStudentQuery(section);
+
+    }
+
 }

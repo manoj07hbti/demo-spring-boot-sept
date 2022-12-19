@@ -5,6 +5,8 @@ import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.query.Param;
 
+import java.util.List;
+
 public interface StudentRepository extends JpaRepository<Student,Long> {
 
     public Student findByRollNo(long rollno);
@@ -16,5 +18,8 @@ public interface StudentRepository extends JpaRepository<Student,Long> {
 
     @Query(value = "SELECT * FROM STUDENT_SEPT_JAVA  WHERE STUDENT_NAME = :name and roll_no= :roll_no", nativeQuery = true)
     public Student nativeQuery(@Param("name") String name,@Param("roll_no") long roll_no);
+
+    @Query(value = "SELECT * from STUDENT_SEPT_JAVA where SECTION= :section",nativeQuery = true)
+    public List<Student> getAllStudent(@Param("section") String section);
 
 }
