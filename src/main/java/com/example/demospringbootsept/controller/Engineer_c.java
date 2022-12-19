@@ -32,5 +32,8 @@ public class Engineer_c {
     public String update_name(@PathVariable int id, @PathVariable double salary){
         return service.update_salary(id,salary);
     }
-
+    @DeleteMapping("/delete_engg/{id}")
+    public String delete_engg(@PathVariable int id){
+        return service.delete_engg(id);
+    }
 }

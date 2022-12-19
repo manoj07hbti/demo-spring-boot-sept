@@ -38,4 +38,9 @@ public class Engineer_s {
        repository.save(engg);
        return "Salary has been updated";
     }
+    public String delete_engg(int id){
+        Engineer_m engg = repository.getById(id);
+        repository.delete(engg);
+        return "Engineer details has been deleted";
+    }
 }
