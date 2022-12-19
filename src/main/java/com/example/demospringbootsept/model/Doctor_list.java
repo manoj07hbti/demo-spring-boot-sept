@@ -9,8 +9,8 @@ import javax.persistence.Id;
 public class Doctor_list {
     @Id
     @GeneratedValue
-    String name;
-    int age ;
+    int rollNo;
+     String name;
     String specialist;
 
     public Doctor_list() {
@@ -18,7 +18,7 @@ public class Doctor_list {
 
     public Doctor_list(String name, int age, String specialist) {
         this.name = name;
-        this.age = age;
+        this.rollNo = rollNo;
         this.specialist = specialist;
     }
 
@@ -33,12 +33,12 @@ public class Doctor_list {
         this.name = name;
     }
 
-    public int getAge() {
-        return age;
+    public int getRollNo() {
+        return rollNo;
     }
 
-    public void setAge(int age) {
-        this.age = age;
+    public void setRollNo(int rollNo) {
+        this.rollNo = rollNo;
     }
 
     public String getSpecialist() {
