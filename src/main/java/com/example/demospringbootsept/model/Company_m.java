@@ -1,8 +1,15 @@
 package com.example.demospringbootsept.model;
 
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Id;
+
+@Entity
 public class Company_m {
-    String name,product;
-    int year;
-    double turnover;
+    @Id
+    String name;
+   double list_price;
+  // @Column(name="sales(in cr.)")
+    double sales;
 
 }
