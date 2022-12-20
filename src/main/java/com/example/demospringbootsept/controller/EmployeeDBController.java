@@ -33,4 +33,14 @@ public class EmployeeDBController {
 
     //U==> Update
 
+    @PostMapping("/update_employee_db/{empid}/{EmpName}")
+    public String updateEmployee(@PathVariable long empid , @PathVariable String EmpName){
+        return service.updateEmp(empid,EmpName);
+    }
+
+    //    D ==> Delete
+    @DeleteMapping("/delete_employee/{empId}")
+    public String delEmployee(@PathVariable long empId){
+        return service.delEmployee(empId);
+    }
 }
