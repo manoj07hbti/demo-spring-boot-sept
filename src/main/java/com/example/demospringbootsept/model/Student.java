@@ -2,6 +2,7 @@ package com.example.demospringbootsept.model;
 
 public class Student {
 
+
     String name;
     int age;
     int rollNo;
